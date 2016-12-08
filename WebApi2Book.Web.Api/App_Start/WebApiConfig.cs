@@ -10,8 +10,7 @@ namespace WebApi2Book.Web.Api
         public static void Register(HttpConfiguration config)
         {
             var constraintsResolver = new DefaultInlineConstraintResolver();
-            constraintsResolver.ConstraintMap.Add("apiVersionConstraint", typeof
-            (ApiVersionConstraint));
+            constraintsResolver.ConstraintMap.Add("apiVersionConstraint", typeof(ApiVersionConstraint));
             config.MapHttpAttributeRoutes(constraintsResolver);
             config.Services.Replace(typeof(IHttpControllerSelector),
             new NamespaceHttpControllerSelector(config));
