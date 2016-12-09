@@ -1,23 +1,24 @@
-﻿using WebApi2Book.Web.Api.Models;
-using System.Net.Http;
-using System.Web.Http;
-using WebApi2Book.Web.Common;
-using WebApi2Book.Web.Common.Routing;
+﻿using System.Web.Http;
 
 namespace WebApi2Book.Web.Api.Controllers.V1
 {
-    [ApiVersion1RoutePrefix("tasks")]
-    [UnitOfWorkActionFilter]
+    [RoutePrefixAttribute("api/employeeTasks")]
     public class TasksController : ApiController
     {
-        [Route("", Name = "AddTaskRoute")]
-        [HttpPost]
-        public Task AddTask(HttpRequestMessage requestMessage, Task newTask)
+        [Route("{id:int:max(100)}")]
+        public string GetTaskWithAMaxIdOf100(int id)
         {
-            return new Task
-            {
-                Subject = "In v1, newTask.Subject = " + newTask.Subject
-            };
+            return "In the GetTaskWithAMaxIdOf100(int id) method, id = " + id;
+        }
+        [Route("{id:int:min(101)}")]
+        [HttpGet]
+        public string FindTaskWithAMinIdOf101(int id)
+        {
+            return "In the FindTaskWithAMinIdOf101(int id) method, id = " + id;
+        }
+        public string Get(string taskNum)
+        {
+            return "In the Get(string taskNum) method, taskNum = " + taskNum;
         }
     }
 }
