@@ -52,10 +52,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mapping\StatusMap.cs" />
+    <Compile Include="Mapping\TaskMap.cs" />
+    <Compile Include="Mapping\UserMap.cs" />
+    <Compile Include="Mapping\VersionedClassMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebApi2Book.Data\WebApi2Book.Data.csproj">
+      <Project>{55b48dcb-e93e-4827-be28-257bed7f8fa6}</Project>
+      <Name>WebApi2Book.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

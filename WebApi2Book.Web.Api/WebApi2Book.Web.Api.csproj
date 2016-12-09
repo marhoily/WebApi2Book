@@ -183,6 +183,10 @@
       <Project>{f9e921e6-4484-4154-8312-531ecab24b7c}</Project>
       <Name>WebApi2Book.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WebApi2Book.Data.SqlServer\WebApi2Book.Data.SqlServer.csproj">
+      <Project>{9fb7a4dc-223b-4e2e-9756-bf125ffc1a20}</Project>
+      <Name>WebApi2Book.Data.SqlServer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WebApi2Book.Web.Api.Models\WebApi2Book.Web.Api.Models.csproj">
       <Project>{cd47708d-4dc1-4d3c-bf1f-c429cb150b2a}</Project>
       <Name>WebApi2Book.Web.Api.Models</Name>

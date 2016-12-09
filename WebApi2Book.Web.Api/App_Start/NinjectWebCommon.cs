@@ -6,7 +6,6 @@ using Ninject;
 using Ninject.Web.Common;
 using WebActivatorEx;
 using WebApi2Book.Web.Api;
-using WebApi2Book.Web.Api.App_Start;
 using WebApi2Book.Web.Common;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(NinjectWebCommon), "Start")]
